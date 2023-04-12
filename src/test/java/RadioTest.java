@@ -3,6 +3,15 @@ import org.junit.jupiter.api.Assertions;
 import ru.netology.services.Radio;
 
 public class RadioTest {
+    @Test
+    public void GetMaxStation() {
+        Radio radio = new Radio(30);
+
+        int expected = 29;
+        int actual = radio.getMaxStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     public void CurrentStation() {
@@ -193,4 +202,3 @@ public class RadioTest {
 
     }
 }
-
